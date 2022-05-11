@@ -1,3 +1,5 @@
+package pojoClasses;
+
 public class SafeRequest {
     //POJO Class
     String safeName;
@@ -13,10 +15,10 @@ public class SafeRequest {
     }
 
     public SafeRequest() {
-        String safeName = "PRV_PACHOLSKI";
-        String folder = "Root";
-        String account = "pacholski";
-        String password = "ADpass1234$";
+        this.safeName = "PRV_PACHOLSKI";
+        this.folder = "Root";
+        this.account = "pacholski";
+        this.password = "ADpass1234$";
     }
 
     public String getSafeName() {
@@ -49,5 +51,15 @@ public class SafeRequest {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "SafeRequest{" +
+                "safeName='" + safeName + '\'' +
+                ", folder='" + folder + '\'' +
+                ", account='" + account + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
